@@ -15,12 +15,14 @@ const canadaData = {
         }
     },
     flightSearches: {
-        '2023': [206, 209, 241, 126, 153, 124, 185, 210, 451, 423, 556, 243],
-        '2024': [380, 270, 425, 419, 450, 451, 429, 315, 543, 554, 544, 389]
+        '2023': [4135, 3873, 3888, 3057, 3102, 3137, 3882, 4765, 6913, 7494, 6291, 5140],
+        '2024': [4999, 4602, 5111, 4829, 4693, 5272, 4907, 5181, 6336, 7730, 8338, 6486],
+        '2025': [5200, 4351, 4903, 5488, 4392, 10123, 4274, null, null, null, null, null]
     },
     hotelGuests: {
         '2023': [2298, 2529, 2592, 1851, 1829, 1319, 1257, 1517, 1727, 2648, 3147, 3202],
-        '2024': [3184, 3483, 2965, 3099, 2734, 2054, 2166, 2068, 2559, 3261, 3792, 4341]
+        '2024': [3184, 3483, 2965, 3099, 2734, 2054, 2166, 2068, 2559, 3261, 3792, 4341],
+        '2025': [4054, 3925, 3279, 3367, 3044, 2442, null, null, null, null, null, null]
     },
     brandHealth: {
         awareness: {
@@ -354,6 +356,14 @@ function initCharts() {
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
                     borderWidth: 2,
                     fill: false
+                },
+                {
+                    label: '2025',
+                    data: canadaData.flightSearches['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    borderWidth: 2,
+                    fill: false
                 }
             ]
         },
@@ -425,6 +435,14 @@ function initCharts() {
                     data: canadaData.hotelGuests['2024'],
                     borderColor: 'rgba(255, 159, 64, 1)',
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                    borderWidth: 2,
+                    fill: false
+                },
+                {
+                    label: '2025',
+                    data: canadaData.hotelGuests['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
                     borderWidth: 2,
                     fill: false
                 }
